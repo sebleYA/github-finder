@@ -1,15 +1,9 @@
-import React, { Component } from 'react';
+import React  from 'react';
+import PropTypes from 'prop-types'
 
-class Useritem extends Component {
-  state = {
-    id: 'id',
-    login: 'seble',
-    avatar_url: 'https://avatars.githubusercontent.com/u/61608724?v=4',
-    html_url: 'https://github.com/sebleYA'
-  };
-
-  render() {
-    const { login, avatar_url, html_url } = this.state; // using deconstruction method
+const Useritem = ({user: { login, avatar_url, html_url}}) => { // using deconstruction method 
+  
+  
     return (
       <div className='card text-center'>
         <img src={avatar_url} alt='' className='round-img' style={{ width: '60px' }} />
@@ -21,7 +15,11 @@ class Useritem extends Component {
         </div>
       </div>
     );
-  }
+  
+}
+
+Useritem.protoType = {
+  user: PropTypes.object.isRequired
 }
 
 export default Useritem;
