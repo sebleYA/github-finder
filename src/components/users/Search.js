@@ -31,7 +31,7 @@ class Search extends Component {
 
     return (
       <div>
-        <form onSubmit={this.onSubmit} classaName='form'>
+        <form onSubmit={this.onSubmit} className='form'>
           <input
             type='text'
             name='text'
