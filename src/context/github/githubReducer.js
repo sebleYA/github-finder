@@ -28,6 +28,13 @@ export default (state, action) => {
         loadin: false,
       };
     }
+    case GET_REPOS:{
+      return{
+        ...state,
+        repos: action.payload,
+        laoading: false
+      }
+    }
 
     case SET_LOADING:
       return {
